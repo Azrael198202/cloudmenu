@@ -1,0 +1,65 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "workbench.colorTheme": "Visual Studio Light",
+    "workbench.sideBar.location": "left",
+    "editor.accessibilitySupport": "off",
+    "window.zoomLevel": 0,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    /* 保存機能がオープンする時、自動フォーマットを実行する。 */
+    "editor.formatOnSave": true,
+
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    // vscodeのデフォルトチェックツールを閉じる
+    "html.validate.scripts": false,
+    "javascript.validate.enable": false,
+    "scss.lint.duplicateProperties": "error",
+    "css.lint.duplicateProperties": "error",
+    "less.lint.zeroUnits": "error",
+
+    /* prettierの設定 */
+    "prettier.printWidth": 120, //最大値を超えたら改行する
+    "prettier.tabWidth": 2, // インデント二文字
+    "prettier.useTabs": false, // インデントは「tab」を使う
+    "prettier.semi": false, // 末文に「セミコロン」を加え
+    "prettier.singleQuote": true, // 「二重引用符」を使わず、「単一引用符」を使う
+    "prettier.proseWrap": "preserve", // デフォルト值。テキストが折り返すのレンダリング（例：GitHub comment）を使ったので、「markdown」のテキストスタイルのように折り返す。
+    "prettier.arrowParens": "avoid", // (x) => {} 矢印関数のパラメータは一つの時「かっこ」を付けるか。avoid：かっこを省略
+    "prettier.bracketSpacing": true, // 対象、配列と文字の間に「スペース」を加え"{ foo: bar }"
+    "prettier.endOfLine": "auto", // 最後は \n \r \n\r auto
+    "prettier.htmlWhitespaceSensitivity": "ignore",
+    "prettier.ignorePath": ".prettierignore", // prettierフォーマットを使わないファイルはプロジェクトの「.prettierignore」ファイルに記入
+
+    "prettier.requireConfig": false, // Require a "prettierconfig" to format prettier
+    "prettier.trailingComma": "none", // 対象や配列の最後の一要素の後ろにコンマを付ける
+
+    /* 様々な言語デフォルトのフォマードルール */
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[sass]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+  }
+}

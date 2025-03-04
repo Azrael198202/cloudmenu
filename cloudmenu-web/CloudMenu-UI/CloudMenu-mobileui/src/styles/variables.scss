@@ -1,0 +1,113 @@
+// base color
+$blue: #324157;
+$light-blue: #3a71a8;
+$pink: #e65d6e;
+$green: #30b08f;
+$tiffany: #4ab7bd;
+$yellow: #fec171;
+$panGreen: #30b08f;
+
+// sidebar
+$menuText: #bfcbd9;
+$menuActiveText: #409eff;
+$subMenuActiveText: #f4f4f5; // https://github.com/ElemeFE/element/issues/12951
+
+$menuBg: #304156;
+$menuHover: #263445;
+
+$subMenuBg: #1f2d3d;
+$subMenuHover: #001528;
+
+$sideBarWidth: 210px;
+
+// color
+$white: #ffffff;
+$mainColor: #1c1a21;
+// 头部左侧边框颜色
+$mainBorder: #d2b383;
+// 头部细边框渐变
+$linearBorder1: #ede7a9;
+$linearBorder2: #a96e44;
+// 标题颜色
+$titleColor: #e8bd79;
+// 头部和页面背景渐变
+$headerLinearBg1: #403c45;
+$headerLinearBg2: #333038;
+// 页面固定定位标题背景色
+$titleBgColorLinear1: #3c3941;
+$titleBgColorLinear2: #302d35;
+//页面背景渐变
+$linearBg1: #403c45;
+$linearBg2: #211f24;
+// 列表边框颜色
+$cellBorder: #514f55;
+// 输入框边框
+$inputBorder: #979797;
+// 底部背景色
+$footerColor: #1c1a20;
+// tab切换分隔边框颜色
+$footerBorderSeparate: #5c4130;
+// tab切换上边框颜色
+$footerBorderTopLinear1: #efe4af;
+$footerBorderTopLinear2: #aa6f45;
+
+// 检索框里文字颜色
+$searchColor: #a7a7a7;
+// 错误颜色
+$red: #c03639;
+
+// 副标题
+$subTitleColor: #88868a;
+
+// 价格颜色：
+$priceColor: #c6a26c;
+
+// 订单列表渐变
+$orderLinear1: #4e4a4b;
+$orderLinear2: #3e3639;
+
+$black: #000;
+
+// 加载不出图片颜色
+$colorError: #b9b9b9;
+$colorBgError: #222;
+
+// 购物车加减背景色和加减颜色
+$cartBgColor: #6f3926;
+$cartColor: #ee9c54;
+
+// 订单确定合计渐变
+$orderSureLinear1: #745039;
+$orderSureLinear2: #999375;
+
+// 弹窗边框
+$lighterColor: #999;
+// 弹窗主要字体颜色
+$mainDialogColor: #bfbfc1;
+
+// switch开关颜色
+$switchColor: #f6d9ab;
+
+$appointment: #f8cbad;
+
+// 下拉框颜色
+$slectBoxColor: #49484d;
+
+// size
+$titleSize: 18px;
+$normalSize: 16px;
+$smallSize: 14px;
+$moreSmallSize: 12px;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}

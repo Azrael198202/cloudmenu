@@ -1,0 +1,745 @@
+@import './variables.scss';
+body {
+  background: $linearBg2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  color: $white;
+  background: linear-gradient(to bottom right, $linearBg1, $linearBg2 100%);
+  font-size: $smallSize;
+  //   min-height: calc(100vh - 78px);
+}
+
+// 头部的help
+.header-help {
+  display: block;
+  width: 38px;
+  height: 38px;
+  background: url('../assets/images/request.png') center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 29px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// 文字说明行
+.txt-desc {
+  background: linear-gradient(to right, $titleBgColorLinear1, $titleBgColorLinear2 100%);
+  padding: 0 25px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  box-sizing: border-box;
+  font-size: $titleSize;
+}
+
+// 左浮动
+.fl {
+  float: left;
+}
+
+// 右浮动
+.fr {
+  float: right;
+}
+
+// 一行溢出隐藏
+.oneline-overhidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 两行溢出隐藏
+.twoline-overhidden {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+// 复选框统一样式start
+.van-checkbox__icon .van-icon {
+  border: 1px solid rgba($color: $white, $alpha: 0.8);
+}
+
+.van-checkbox__icon--checked {
+  .van-icon {
+    background-color: transparent !important;
+  }
+
+  .van-icon-success::before {
+    color: $priceColor;
+  }
+}
+
+.van-checkbox__icon {
+  font-size: 16px;
+}
+
+.van-checkbox__icon--checked .van-icon {
+  background-color: $priceColor;
+  border-color: $priceColor;
+}
+// 复选框统一样式end
+
+// 修改tabbar样式
+.van-tabbar--fixed {
+  height: 78px;
+  background-color: $footerColor;
+  border-top: 1px solid $footerBorderSeparate;
+  z-index: 9999;
+}
+.van-tabbar-item {
+  height: 78px;
+  color: #fff;
+}
+
+.van-tabbar-item__icon {
+  width: 50px;
+  height: 50px;
+}
+
+.van-tabbar-item__icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.van-tabbar-item--active {
+  background-color: $footerColor;
+}
+
+.tab-two .van-tabbar-item:first-child {
+  border-right: 1px solid $footerBorderSeparate;
+}
+
+.tab-two {
+  border-top: 4px transparent solid;
+  border-image: linear-gradient(to right, $footerBorderTopLinear1, $footerBorderTopLinear2) 1 10;
+
+  .van-tabbar-item:first-child {
+    border-right: 1px solid $footerBorderSeparate;
+  }
+
+  .van-tabbar-item:first-child {
+    border-right: 1px solid $footerBorderSeparate;
+  }
+}
+
+// 修改公共列表样式start
+.van-cell {
+  background-color: transparent;
+  color: $white;
+  border: 1px solid rgba($color: $inputBorder, $alpha: 0.3);
+  padding: 12px 25px;
+  font-size: $smallSize;
+
+  // 解决套餐右滑动，左边距离变大问题
+  .van-cell__title {
+    width: 100%;
+  }
+}
+
+.van-cell--clickable:active {
+  background-color: rgba($color: $white, $alpha: 0.1);
+}
+
+.van-cell::after {
+  border-bottom: 0;
+}
+
+.van-cell__value--alone {
+  color: $white;
+}
+
+// 100和110共同样式
+.list {
+  padding: 20px 0;
+
+  .appointment {
+    font-weight: normal;
+    margin-left: 20px;
+  }
+
+  .list-l,
+  .list-r {
+    height: 110px;
+  }
+
+  .list-l {
+    position: relative;
+    // width: 110px;
+    // height: 110px;
+    // background-color: $black;
+    // margin-right: 8px;
+
+    .preparation {
+      width: 110px;
+      height: 110px;
+      background-color: rgba($color: $black, $alpha: 0.8);
+      color: $white;
+      text-align: center;
+      line-height: 110px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    .layer {
+      width: 110px;
+      height: 20px;
+      line-height: 20px;
+      background: rgba($color: $black, $alpha: 0.6);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+      font-size: $smallSize;
+    }
+  }
+
+  .van-cell {
+    border: 0;
+    padding: 10px 10px;
+  }
+
+  .van-cell__title {
+    // display: flex;
+    // justify-content: start;
+    // align-items: flex-start;
+
+    .van-image {
+      width: 110px;
+      height: 110px;
+      margin-right: 8px;
+    }
+  }
+
+  .van-image__error-icon {
+    font-size: 40px;
+    color: $colorError;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+  }
+
+  .van-image__error,
+  .van-image__loading {
+    background-color: $colorBgError;
+  }
+
+  .van-icon-photo-fail::after {
+    content: '写真なし';
+    font-size: 14px;
+    display: block;
+    text-align: center;
+  }
+}
+
+.product-info {
+  span {
+    font-size: $moreSmallSize;
+    color: $inputBorder;
+  }
+  .price {
+    color: $priceColor;
+    font-size: $titleSize;
+    text-align: right;
+    display: block;
+    line-height: 25px;
+  }
+}
+.food-txt {
+  min-width: 62.5%;
+  font-size: $smallSize;
+  position: relative;
+  // height: 100%;
+
+  > .van-row {
+    display: block;
+    color: $subTitleColor;
+    line-height: 20px;
+  }
+
+  // 复选框文字颜色和大小
+  .van-checkbox__label {
+    color: rgba($color: $white, $alpha: 0.8);
+    font-size: $smallSize;
+  }
+}
+
+.food-txt > .van-row:first-child,
+.food-txt > span:first-child {
+  font-size: 18px;
+  color: rgba($color: $white, $alpha: 0.8);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  i {
+    display: inline-block;
+    width: 20px;
+    height: 17px;
+    background: url('../assets/images/chef.png') center center no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.food-txt .desc {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.height-fixed {
+  height: 110px !important;
+}
+// 修改公共列表样式end
+
+.van-cell-group {
+  background: transparent;
+}
+
+// 更改radio默认
+.van-radio__label {
+  color: $white;
+  margin-left: 10px;
+}
+
+.van-radio--horizontal {
+  margin-right: 30px;
+}
+
+// cma090、cma180、cma170共通检索
+.search {
+  padding: 12px 20px 12px 24px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background: linear-gradient(to right, $titleBgColorLinear1, $titleBgColorLinear2 100%);
+
+  .van-search {
+    width: 270px;
+    border: 0;
+    border-radius: 3px;
+    padding: 0;
+  }
+
+  .van-field__left-icon {
+    width: 0;
+  }
+
+  i {
+    display: block;
+    width: 36px;
+    height: 28px;
+    margin-left: 20px;
+
+    img {
+      width: 36px;
+      height: 28px;
+    }
+  }
+
+  .van-search__content {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 0;
+    background: rgba($color: $white, $alpha: 0.8);
+  }
+
+  .van-cell {
+    padding: 0;
+    padding-left: 12px;
+    border-radius: 3px;
+  }
+
+  .van-search .van-cell {
+    line-height: 40px;
+  }
+
+  .van-icon-search::before {
+    content: '';
+  }
+
+  .van-field__control {
+    color: $searchColor;
+  }
+
+  .van-icon-clear {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.error-message {
+  color: red;
+  padding: 0 25px;
+  padding-top: 10px;
+  font-size: $smallSize;
+}
+
+// cma180和cma170检索框重新调整
+.search-reset {
+  padding: 5px 0 30px;
+  position: relative;
+}
+
+// 输入框下边报红
+.position-error {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+}
+
+// cma180和170共同padding
+.start-warehousing {
+  padding: 0 24px;
+  height: 100%;
+
+  .top {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+}
+
+.van-dropdown-item__option {
+  span {
+    color: $mainColor;
+  }
+}
+
+// cma080和cma100弹框样式共同
+
+.order-remarks {
+  padding: 15px 20px;
+  background: $mainColor;
+  border: 2px solid $lighterColor;
+  border-radius: 8px;
+  width: 76%;
+  font-size: $moreSmallSize;
+  color: $mainDialogColor;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+
+  .van-dropdown-item {
+    height: 118px !important;
+
+    .van-overlay {
+      height: auto;
+    }
+  }
+
+  .subtitle {
+    line-height: 35px;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: $normalSize;
+    color: $white;
+  }
+
+  // 下拉框
+  .van-dropdown-menu__bar {
+    height: 40px;
+    background: $mainColor;
+    border: 1px solid $lighterColor;
+    border-radius: 3px;
+  }
+
+  .van-dropdown-menu__title {
+    color: $white;
+    width: 85%;
+  }
+
+  .van-ellipsis {
+    color: $mainDialogColor;
+  }
+
+  .van-dropdown-menu {
+    position: relative;
+  }
+
+  .van-dropdown-item {
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    top: 100% !important;
+  }
+
+  .van-overlay {
+    background: transparent;
+  }
+
+  .van-cell {
+    padding: 10px;
+  }
+
+  .row-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      width: 105px;
+      height: 40px;
+      line-height: 40px;
+      color: $white;
+      border: 0;
+      border-radius: 5px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    button:first-child {
+      background: $inputBorder;
+    }
+  }
+}
+
+// 渐变按钮共通
+.btn-linear {
+  background-image: linear-gradient(to right, $linearBorder2, $linearBorder1) !important;
+  border: 0;
+}
+
+// cma190和cama200登录按钮共通样式
+.btn-login {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  padding: 0 25px;
+  box-sizing: border-box;
+
+  .btn-linear {
+    width: 100%;
+    height: 45px;
+    border: 0;
+    border-radius: 5px;
+  }
+}
+
+// 设置下拉框为灰色
+.van-dropdown-menu {
+  .van-popup {
+    background-color: $subMenuActiveText;
+  }
+  // 更改下拉对钩颜色
+  .van-dropdown-item__option--active .van-dropdown-item__icon {
+    color: $linearBorder2;
+  }
+}
+// 下拉框文字红色改掉
+.van-dropdown-menu__title--active {
+  color: $linearBorder2;
+}
+
+// 圆点点
+.pop-txt {
+  // position: absolute;
+  // left: 80px;
+  // top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: block;
+  background-color: $priceColor;
+  margin-left: 5px;
+  color: $white !important;
+  text-align: center;
+  line-height: 20px;
+  // z-index: 1;
+}
+
+// 下拉
+.van-cell__title {
+  flex: 9;
+}
+
+.per-capita-price {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  .per-capita-price-item {
+    > div {
+      // width: 62px;
+      padding: 0 8px;
+      height: 48px;
+      background: rgba($color: $white, $alpha: 0.1);
+      margin-right: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    color: #88868a;
+    line-height: 20px;
+    font-size: 12px;
+  }
+
+  span {
+    text-align: center;
+  }
+
+  .price {
+    font-size: $smallSize;
+    position: static;
+    text-align: center;
+    color: #c6a26c;
+  }
+}
+
+// radio元素
+.fa-dot-circle-o,
+.fa-circle-0 {
+  display: block;
+  width: 22px;
+  height: 22px;
+  font-size: 22px;
+  //用背景图片的方式设置渐变方向跟颜色
+  background-image: linear-gradient(to right, $linearBorder2, $linearBorder1) !important;
+  //设置绘制的路径是文字
+  -webkit-background-clip: text;
+  //设置文字颜色透明
+  color: transparent;
+  padding-left: 1px;
+}
+
+.van-radio__icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 1px #fff solid;
+  border-radius: 50%;
+}
+
+.van-radio__icon .van-icon {
+  // border-image: linear-gradient(to right, $linearBorder2, $linearBorder1) !important;
+}
+
+.van-radio__icon .van-icon::before {
+  content: '';
+  color: transparent;
+}
+
+.van-radio__icon--checked .van-icon::before {
+  content: '';
+  color: transparent;
+}
+
+.van-radio__icon--checked .van-icon {
+  background-image: linear-gradient(to right, $linearBorder2, $linearBorder1) !important;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: 0;
+}
+
+// 下拉检索公共样式
+.select-down {
+  position: relative;
+
+  input {
+    height: 40px;
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba($color: $white, $alpha: 0.6);
+    border-radius: 3px;
+    padding: 0 5px;
+    box-sizing: border-box;
+  }
+
+  .select-input {
+    height: 40px;
+    position: relative;
+
+    .fa {
+      display: block;
+      color: $white;
+      position: absolute;
+      right: 15px;
+      top: 12px;
+    }
+  }
+
+  ul {
+    width: 100%;
+    border: 1px solid rgba($color: $white, $alpha: 0.6);
+    box-sizing: border-box;
+    border-top: 0;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    max-height: 84px;
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 30;
+
+    li {
+      width: 100%;
+      padding: 0 5px;
+      line-height: 40px;
+      background: $slectBoxColor;
+      box-sizing: border-box;
+      border-bottom: 1px solid $black;
+    }
+  }
+}
+
+// 文本域默认颜色设置未白色
+.van-field__control {
+  color: $white;
+}
+
+// 所有的消息弹框改变成黑底白字start
+.van-dialog {
+  background-color: $mainColor;
+  color: $white;
+  border: 2px solid $lighterColor;
+}
+
+// 确定按钮样式
+.van-button--default {
+  background-color: $mainColor;
+}
+
+.van-dialog__confirm,
+.van-dialog__confirm:active,
+.van-button__text {
+  color: $white;
+}
+.van-cell__value :first-child {
+  margin-right: 0px !important;
+}
+
+.van-dialog__content--isolated {
+  min-height: auto;
+}
+
+// 所有的消息弹框改变成黑底白字end

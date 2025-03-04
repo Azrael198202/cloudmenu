@@ -1,0 +1,18 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "server=localhost;database=cloudmenu_lao_shanghai;user=developer;password=Lsh@*Lw2021!$%#;treattinyasboolean=true"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "FileSystemStorageConfig": {
+    "Directory": "/home/cloudmenu/File/",
+    "EnableLogging": true
+  },
+  "AllowedHosts": "*",
+  "Urls": "http://localhost:5000"
+}

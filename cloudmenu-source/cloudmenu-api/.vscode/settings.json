@@ -1,0 +1,6 @@
+{
+    "editor.renderWhitespace": "all",
+    "csharp.format.enable": true,
+    "editor.formatOnSave": true,
+    "diffEditor.wordWrap": "on"
+}

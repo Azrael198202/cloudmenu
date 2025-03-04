@@ -1,0 +1,56 @@
+// base color
+$blue: #b4c7e7;
+$light-blue: #3a71a8;
+$red: #ff0000;
+$pink: #e65d6e;
+$green: #30b08f;
+$tiffany: #4ab7bd;
+$orange: #ffd966;
+$yellow: #ffff00;
+$panGreen: #30b08f;
+$backgroundColor: #698d55; // 主题色
+$moreLightColor: #eeeeee; // 更浅色
+$borderColor: #cedeb9;
+$akiColor: #bdd7ee; // 空き
+$yoyakuColor: #c5e0b4; // 予約済
+$usingColor: #f8cbad; // 使用中
+$seisanColor: #ffff00; // 精算済
+$menuBtnColor: #4685ff; // 按钮颜色
+$white: #fff;
+//字体颜色
+$fontMainColor: #000000; // 主题色
+$fontMidColor: #666666; // 中间黑
+$fontLightColor: #999999; // 浅黑
+$fontWhiteColor: #ffffff; // 白色
+$fontColor: #698d55;
+$errorFont: #c03639;
+$requiredFont: #c82c2c;
+// sidebar
+$menuText: #bfcbd9;
+$menuActiveText: #409eff;
+$subMenuActiveText: #f4f4f5; // https://github.com/ElemeFE/element/issues/12951
+$menuBg: #304156;
+$menuHover: #263445;
+$subMenuBg: #1f2d3d;
+$subMenuHover: #001528;
+$sideBarWidth: 210px;
+// size
+$titlBigSize: 24px;
+$titleMidSize: 18px;
+$titleNormalSize: 16px;
+$normalSize: 14px;
+$smallSize: 12px;
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+  backgroundColor: $backgroundColor;
+  fontColor: $fontColor;
+}
